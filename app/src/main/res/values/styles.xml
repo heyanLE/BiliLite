@@ -1,0 +1,58 @@
+<resources>
+
+    <style name="Theme.ToolBar.Base.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:text">主题切换</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme_Blue" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#2094f1</item>
+        <item name="colorPrimaryDark">#2094f1</item>
+        <item name="colorAccent">#2094f1</item>
+    </style>
+
+    <style name="Theme_Pink" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#f97197</item>
+        <item name="colorPrimaryDark">#f97197</item>
+        <item name="colorAccent">#f97197</item>
+    </style>
+
+    <style name="Theme_Red" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#f24235</item>
+        <item name="colorPrimaryDark">#f24235</item>
+        <item name="colorAccent">#f24235</item>
+    </style>
+
+    <style name="Theme_Yellow" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#fcbf07</item>
+        <item name="colorPrimaryDark">#fcbf07</item>
+        <item name="colorAccent">#fcbf07</item>
+    </style>
+
+    <style name="Theme_Green" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#89c14a</item>
+        <item name="colorPrimaryDark">#89c14a</item>
+        <item name="colorAccent">#89c14a</item>
+    </style>
+
+    <style name="Theme_Purple" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#9a27af</item>
+        <item name="colorPrimaryDark">#9a27af</item>
+        <item name="colorAccent">#9a27af</item>
+    </style>
+
+    <style name="TabText" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

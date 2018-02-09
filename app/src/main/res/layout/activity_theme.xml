@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorPrimary"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/theme_toolbar"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="主题切切切换"
+            app:titleTextColor="#fff"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:elevation="0dp"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/theme_blue"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="@drawable/bac_blue_gradient"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toStartOf="@id/theme_blue_tv"
+                        android:layout_toLeftOf="@id/theme_blue_tv">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="胖次蓝"
+                            android:gravity="center"
+                            android:textColor="#fff"/>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/theme_blue_tv"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="?attr/colorPrimary"
+                        android:text="使用"/>
+
+
+                </RelativeLayout>
+
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/theme_pink"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="@drawable/bac_pink_gradient"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toStartOf="@id/theme_pink_tv"
+                        android:layout_toLeftOf="@id/theme_pink_tv">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="少女粉"
+                            android:gravity="center"
+                            android:textColor="#fff"/>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/theme_pink_tv"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="?attr/colorPrimary"
+                        android:text="使用"/>
+
+
+                </RelativeLayout>
+
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/theme_yellow"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="@drawable/bac_yellow_gradient"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toStartOf="@id/theme_yellow_tv"
+                        android:layout_toLeftOf="@id/theme_yellow_tv">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="咸蛋黄"
+                            android:gravity="center"
+                            android:textColor="#fff"/>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/theme_yellow_tv"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="?attr/colorPrimary"
+                        android:text="使用"/>
+
+
+                </RelativeLayout>
+
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/theme_red"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="@drawable/bac_red_gradient"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toStartOf="@id/theme_red_tv"
+                        android:layout_toLeftOf="@id/theme_red_tv">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="姨妈红"
+                            android:gravity="center"
+                            android:textColor="#fff"/>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/theme_red_tv"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="?attr/colorPrimary"
+                        android:text="使用"/>
+
+
+                </RelativeLayout>
+
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/theme_green"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="@drawable/bac_green_gradient"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toStartOf="@id/theme_green_tv"
+                        android:layout_toLeftOf="@id/theme_green_tv">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="原谅绿"
+                            android:gravity="center"
+                            android:textColor="#fff"/>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/theme_green_tv"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="?attr/colorPrimary"
+                        android:text="使用"/>
+
+
+                </RelativeLayout>
+
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/theme_purple"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="@drawable/bac_purple_gradient"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toStartOf="@id/theme_purple_tv"
+                        android:layout_toLeftOf="@id/theme_purple_tv">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="基佬紫"
+                            android:gravity="center"
+                            android:textColor="#fff"/>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/theme_purple_tv"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="?attr/colorPrimary"
+                        android:text="使用"/>
+
+
+                </RelativeLayout>
+
+
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>
