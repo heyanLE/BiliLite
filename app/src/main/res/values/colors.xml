@@ -4,8 +4,6 @@
     <color name="colorPrimaryDark">#2094f1</color>
     <color name="colorAccent">#2094f1</color>
 
-    <color name="white">#FFF</color>
-    <color name="font">#CCFFFFFF</color>
     <color name="chose">#eaeaea</color>
     <color name="no">#00eaeaea</color>
 </resources>
