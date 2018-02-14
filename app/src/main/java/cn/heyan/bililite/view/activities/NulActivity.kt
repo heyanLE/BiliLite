@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_nul_layout.*
  * NulActivity
  * 一个很普通的Activity
  * 拦截异常后启动的报错界面
+ * 因为只是一个界面 所以只有View层
  * Created by HeYan on 2018/2/11 0011.
  */
 

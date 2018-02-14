@@ -37,6 +37,13 @@ class BiliLiteApplication:Application(){
         //初始化ThemeMonitor
         ThemeMonitor.initTheme()
 
+        //初始化ActivityMonitor
+        ActivityMonitor.init(this)
+
+        setTheme(ThemeMonitor.nowStyleId)
+
+        //AppData.addShieldTid(13)
+
     }
 
 }

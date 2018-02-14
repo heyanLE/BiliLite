@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">?attr/colorPrimary</item>
+        <item name="colorPrimaryDark">?attr/colorPrimaryDark</item>
+        <item name="colorAccent">?attr/colorAccent</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -50,6 +50,18 @@
         <item name="colorPrimary">#9a27af</item>
         <item name="colorPrimaryDark">#9a27af</item>
         <item name="colorAccent">#9a27af</item>
+    </style>
+
+    <style name="Theme_Black" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#000000</item>
+    </style>
+
+    <style name="Theme_Gray" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#607d8a</item>
+        <item name="colorPrimaryDark">#607d8a</item>
+        <item name="colorAccent">#607d8a</item>
     </style>
 
     <style name="TabText" parent="TextAppearance.Design.Tab">

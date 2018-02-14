@@ -18,6 +18,14 @@ object ActivityMonitor: Application.ActivityLifecycleCallbacks{
     val ActivityList:MutableList<Activity> = mutableListOf()
 
     /**
+     * 初始化
+     * @param application Application对象
+     */
+    fun init(application: Application){
+        application.registerActivityLifecycleCallbacks(this)
+    }
+
+    /**
      * finish所有的Activity
      * 清空返回栈
      */

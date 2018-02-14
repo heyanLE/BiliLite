@@ -16,12 +16,14 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 object ThemeMonitor{
 
     //主题Id（因为R.style.xx  的id会变，所以需要用常量转换）
-    val ThemeIdBlue = "blue"
-    val ThemeIdPink = "pink"
-    val ThemeIdRed = "red"
-    val ThemeIdYellow = "yellow"
-    val ThemeIdGreen = "green"
-    val ThemeIdPurple = "purple"
+    val ThemeIdBlue = "胖次蓝"
+    val ThemeIdPink = "少女粉"
+    val ThemeIdRed = "姨妈红"
+    val ThemeIdYellow = "咸蛋黄"
+    val ThemeIdGreen = "原谅绿"
+    val ThemeIdPurple = "基佬紫"
+    val ThemeIdBlack = "寡妇黑"
+    val ThemeIdGray = "小灰灰"
 
     //重启前台Activity时候传入数据的Key
     val THEME_EXTRA_KEY = "themeCacheData"
@@ -42,11 +44,13 @@ object ThemeMonitor{
         mapId2Style[ThemeIdYellow] = R.style.Theme_Yellow
         mapId2Style[ThemeIdGreen] = R.style.Theme_Green
         mapId2Style[ThemeIdPurple] = R.style.Theme_Purple
+        mapId2Style[ThemeIdBlack] = R.style.Theme_Black
+        mapId2Style[ThemeIdGray] = R.style.Theme_Gray
 
     }
 
     fun initTheme(){
-        nowThemeId = AppData.style
+        nowThemeId = AppData.spData!!.theme
         nowStyleId = mapId2Style[nowThemeId] as Int
     }
 
@@ -60,9 +64,14 @@ object ThemeMonitor{
         nowThemeId = themeId
         nowStyleId = mapId2Style[themeId] as Int
 
+        AppData.spData?.theme = themeId
+        AppData.spData?.save()
+
         //创建多一个返回栈对象，把原来的元素全部加入
         val listN:MutableList<Activity> = mutableListOf()
         listN.addAll(ActivityMonitor.ActivityList)
+
+        HeLog.i("Al.size",ActivityMonitor.ActivityList.size.toString(),this)
 
         //把最后一个Activity提取出来
         val activity = listN[listN.size - 1]
@@ -71,14 +80,7 @@ object ThemeMonitor{
         listN.removeAt(listN.size - 1)
 
 
-        //重启栈内第一个Activity
-        //为了防止recreate出现的闪光
-        val intent = Intent(activity, activity.javaClass)
-        intent.putExtra(THEME_EXTRA_KEY, data)//向intent假如数据
-        activity.startActivity(intent)
-        activity.overridePendingTransition(android.R.anim.fade_in
-                , android.R.anim.fade_out)//activity跳转动画
-        activity.finish()
+
 
 
         //以返回栈为数据源创建被观察者
@@ -90,6 +92,15 @@ object ThemeMonitor{
                     //Log输出
                     HeLog.i(it.javaClass.name,"onRecreate",this)
                 }
+
+        //重启栈内第一个Activity
+        //为了防止recreate出现的闪光
+        val intent = Intent(activity, activity.javaClass)
+        activity.application.setTheme(nowStyleId)
+        intent.putExtra(THEME_EXTRA_KEY, data)//向intent假如数据
+        activity.startActivity(intent)
+        activity.overridePendingTransition(0,0)//activity跳转动画
+        activity.finish()
 
     }
 

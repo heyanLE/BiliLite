@@ -29,7 +29,7 @@ abstract class LazyLoadFragment():Fragment(){
     abstract val LAYOUT_ID : Int
     
     //可空变量，当前Fragment内的RootView
-    private var rootView:View? = null
+    var rootView:View? = null
 
 
 
@@ -49,18 +49,11 @@ abstract class LazyLoadFragment():Fragment(){
         //是否可见 -> 返回当前可见状态
         isVisibility = userVisibleHint
         
-        //如果当前状态为可见
-        if (isVisibility){
-            //如果是第一次可见
-            if (isFirstVisibility){
-                //调用OnFirstVisibility回调
-                onFirstVisibility()
-                //第一次可见标识为false
-                isFirstVisibility = false
-            }else{
-                //调用OnVisibility回调
-                onVisibility()
-            }
+        //如果当前状态为可见-且为第一次可见
+        if(isFirstVisibility && isVisibility){
+            isFirstVisibility = false
+            //HeLog.i("onFragmentFirst",this)
+            onFirstVisibility()
         }
         
         

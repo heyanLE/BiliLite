@@ -20,18 +20,12 @@ object AppData{
      * @param context Context : 上下文
      */
     fun init(context: Context){
-        //初始化DataJson
-        DataJson.loadJson(context)
+        //初始化SQLiteHelper
+        SQLiteHelper.init(context)
+        //初始化SPHelper
+        SPHelper.init(context)
     }
-    
-    /**
-     * 保存当前更改的数据
-     * @param context Context : 上下文
-     */
-    fun save(context: Context){
-        //保存数据
-        DataJson.saveJson(context)
-    }
+
     
     
     //===================================
@@ -42,41 +36,47 @@ object AppData{
      * 直接获取，设置
      */
 
-    val data : Data
-    get() = DataJson.data
+    val shieldUpList:MutableList<ShieldUp>
+        get() = SQLiteHelper.sQLite!!.getUpList()
 
-    var timeBegin : String
-    get() = data.time.timeBegin
-    set(value) {
-        data.time.timeBegin = value
+    val shieldWordList:MutableList<String>
+        get() = SQLiteHelper.sQLite!!.getWordList()
+
+    val shieldTidList:MutableList<Int>
+        get() = SQLiteHelper.sQLite!!.getTidList()
+
+    val spData:SP?
+        get() = SPHelper.sP
+
+    //==================================
+    fun addShieldUp(shieldUp: ShieldUp){
+        SQLiteHelper.sQLite!!.addUp(shieldUp)
     }
 
-    var timeEnd : String
-    get() = data.time.timeEnd
-    set(value) {
-        data.time.timeEnd = value
+    fun addShieldWord(shieldWord:String){
+        SQLiteHelper.sQLite!!.addWord(shieldWord)
     }
 
-    var style : String
-    get() = data.style
-    set(value) {
-        data.style = value
+    fun addShieldTid(shieldTid:Int){
+        SQLiteHelper.sQLite!!.addTid(shieldTid)
     }
 
-    private val shield : Shield
-    get() = data.shield
+    fun deleteShieldUpByName(name:String){
+        SQLiteHelper.sQLite!!.deleteUp(name)
+    }
 
-    val shieldWord : MutableList<String>
-    get() = shield.shieldWord
+    fun deleteShieldUpByMid(mid:Int){
+        SQLiteHelper.sQLite!!.deleteUp(mid)
+    }
 
-    val shieldTid : MutableList<String>
-    get() = shield.shieldTid
+    fun deleteShieldWord(word:String){
+        SQLiteHelper.sQLite!!.deleteWord(word)
+    }
 
-    val shieldUp : MutableList<ShieldUp>
-    get() = shield.shieldUp
+    fun deleteShieldTid(tid:Int){
+        SQLiteHelper.sQLite!!.deleteTid(tid)
+    }
 
-    //新的ShieldUp对象
-    val newShieldUp:ShieldUp
-    get() = ShieldUp()
+
 
 }
